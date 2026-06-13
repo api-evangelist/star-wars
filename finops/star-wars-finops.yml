@@ -1,0 +1,31 @@
+name: Star Wars API FinOps
+description: Financial operations and cost considerations for the Star Wars REST API (SWAPI / swapi.info)
+url: https://swapi.info
+finOps:
+  overview: >
+    The Star Wars REST API (swapi.info) is completely free to use with no
+    pricing tiers, no pay-per-request model, and no subscription costs.
+    The API is an open-source passion project hosted on Vercel and distributed
+    via Cloudflare CDN at zero cost to API consumers.
+  costModel: free
+  estimatedMonthlyCost: 0.00
+  currency: USD
+  considerations:
+    - item: No API usage fees
+      detail: All endpoints are free and unlimited with no cost per request.
+    - item: No authentication costs
+      detail: >
+        No API key purchase, subscription, or account creation is required
+        to access any endpoint.
+    - item: CDN delivery
+      detail: >
+        Response times average ~50ms globally due to Cloudflare CDN caching,
+        reducing any latency-related cost concerns for consumer applications.
+    - item: Open source
+      detail: >
+        The project is MIT-licensed and self-hostable, meaning teams with
+        strict compliance requirements can run their own instance at their
+        own infrastructure cost.
+  links:
+    - name: GitHub Repository
+      url: https://github.com/SivaramPg/swapi.info

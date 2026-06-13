@@ -1,0 +1,20 @@
+name: Star Wars API Plans
+description: Pricing plans for the Star Wars REST API (SWAPI / swapi.info)
+url: https://swapi.info
+plans:
+  - name: Free
+    description: >
+      Completely free and open-source access to all Star Wars universe data
+      with no rate limits, no authentication required, and no cost.
+    price: 0.00
+    currency: USD
+    billingCycle: none
+    features:
+      - Unlimited API requests
+      - No API key or authentication required
+      - Access to all resource endpoints (films, people, planets, species, starships, vehicles)
+      - JSON-only responses
+      - CDN-powered global delivery (~50ms response times)
+      - 100% uptime SLA via Vercel + Cloudflare infrastructure
+      - No advertisements
+      - Open source (MIT License)

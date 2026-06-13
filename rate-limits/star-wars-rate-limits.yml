@@ -1,0 +1,19 @@
+name: Star Wars API Rate Limits
+description: Rate limit policies for the Star Wars REST API (SWAPI / swapi.info)
+url: https://swapi.info
+rateLimits:
+  - name: No Rate Limits
+    description: >
+      The Star Wars API (swapi.info) explicitly enforces no rate limits.
+      The API is served via a CDN-powered static file architecture on Vercel
+      and Cloudflare, enabling it to handle over 1,000,000 daily requests
+      without any throttling restrictions on individual consumers.
+    requests: unlimited
+    window: none
+    scope: global
+    authentication: none
+    notes: >
+      Because swapi.info is a GET-only, file-based API served entirely through
+      Cloudflare and Vercel CDN edges, there is no backend server to overload.
+      All endpoints return pre-rendered static JSON, which is why no rate
+      limiting is imposed.

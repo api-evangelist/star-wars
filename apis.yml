@@ -1,0 +1,80 @@
+aid: star-wars
+name: Star Wars API
+description: >
+  The Star Wars REST API (SWAPI / swapi.info) is the world's first quantified
+  and programmatically-accessible data source for all the data from the Star
+  Wars canon universe. It provides structured JSON access to films, characters
+  (people), starships, vehicles, planets, and species from the Star Wars
+  universe via a simple HTTP GET API. The API requires no authentication, has
+  no rate limits, and is completely free and open source. Originally created by
+  Paul Hallett as swapi.co and later swapi.dev, the current maintained
+  iteration at swapi.info was rebuilt by Sivaram P as a CDN-powered,
+  file-based API serving over one million daily requests with sub-50ms global
+  response times via Vercel and Cloudflare.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/apis.yml
+created: '2026-06-13'
+modified: '2026-06-13'
+specificationVersion: '0.19'
+tags:
+  - Star Wars
+  - Science Fiction
+  - Entertainment
+  - Films
+  - Characters
+  - Planets
+  - Starships
+  - Vehicles
+  - Species
+  - Open Source
+apis:
+  - aid: star-wars:star-wars-api
+    name: Star Wars REST API
+    description: >
+      A REST API providing GET-only access to canonical Star Wars universe data
+      including films, people, planets, species, starships, and vehicles.
+      Responses are JSON with hypermedia URL linking between related resources.
+      No authentication is required.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://swapi.info
+    baseURL: https://swapi.info/api
+    tags:
+      - Star Wars
+      - REST
+      - Films
+      - People
+      - Planets
+      - Species
+      - Starships
+      - Vehicles
+    properties:
+      - type: Documentation
+        url: https://swapi.info/documentation
+      - type: Playground
+        url: https://swapi.info/playground
+      - type: Plans
+        url: https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/plans/star-wars-plans-pricing.yml
+      - type: RateLimits
+        url: https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/rate-limits/star-wars-rate-limits.yml
+      - type: FinOps
+        url: https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/finops/star-wars-finops.yml
+common:
+  - type: Website
+    url: https://swapi.info
+  - type: Documentation
+    url: https://swapi.info/documentation
+  - type: GitHubOrg
+    url: https://github.com/SivaramPg/swapi.info
+  - type: StatusPage
+    url: https://status.swapi.info
+  - type: Playground
+    url: https://swapi.info/playground
+  - type: Plans
+    url: https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/plans/star-wars-plans-pricing.yml
+  - type: RateLimits
+    url: https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/rate-limits/star-wars-rate-limits.yml
+  - type: FinOps
+    url: https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/finops/star-wars-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
