@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/star-wars/main/json-schema/film.json",
+  "title": "Film",
+  "description": "A Star Wars film",
+  "type": "object",
+  "required": [
+    "title",
+    "episode_id",
+    "opening_crawl",
+    "director",
+    "producer",
+    "release_date",
+    "characters",
+    "planets",
+    "starships",
+    "vehicles",
+    "species",
+    "created",
+    "edited",
+    "url"
+  ],
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "The title of this film"
+    },
+    "episode_id": {
+      "type": "integer",
+      "description": "The episode number of this film"
+    },
+    "opening_crawl": {
+      "type": "string",
+      "description": "The opening paragraphs at the beginning of this film"
+    },
+    "director": {
+      "type": "string",
+      "description": "The name of the director of this film"
+    },
+    "producer": {
+      "type": "string",
+      "description": "The name(s) of the producer(s) of this film"
+    },
+    "release_date": {
+      "type": "string",
+      "format": "date",
+      "description": "The ISO 8601 date format of film release at original creator country"
+    },
+    "characters": {
+      "type": "array",
+      "description": "URLs of People resources featured in this film",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "planets": {
+      "type": "array",
+      "description": "URLs of Planet resources featured in this film",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "starships": {
+      "type": "array",
+      "description": "URLs of Starship resources featured in this film",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "vehicles": {
+      "type": "array",
+      "description": "URLs of Vehicle resources featured in this film",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "species": {
+      "type": "array",
+      "description": "URLs of Species resources featured in this film",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "created": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 date-time when this resource was created"
+    },
+    "edited": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 date-time when this resource was last edited"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "The hypermedia URL of this resource"
+    }
+  }
+}

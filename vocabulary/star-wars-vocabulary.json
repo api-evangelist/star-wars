@@ -1,0 +1,130 @@
+{
+  "vocabulary": {
+    "name": "Star Wars API Vocabulary",
+    "description": "Domain terms used by the Star Wars REST API (swapi.info)",
+    "version": "1.0.0",
+    "source": "https://swapi.info",
+    "terms": [
+      {
+        "term": "film",
+        "definition": "A Star Wars canonical film, identified by episode number and title, including metadata such as director, producer, release date, and hypermedia links to related resources"
+      },
+      {
+        "term": "episode_id",
+        "definition": "The sequential episode number of a Star Wars film within the Skywalker Saga (1-6 in the original SWAPI dataset)"
+      },
+      {
+        "term": "opening_crawl",
+        "definition": "The iconic scrolling text that appears at the beginning of each Star Wars film, providing narrative context"
+      },
+      {
+        "term": "person",
+        "definition": "A sentient individual who appears in Star Wars canon, including heroes, villains, and supporting characters"
+      },
+      {
+        "term": "birth_year",
+        "definition": "The year of birth of a person in the Star Wars in-universe calendar, expressed in BBY (Before the Battle of Yavin) or ABY (After the Battle of Yavin)"
+      },
+      {
+        "term": "BBY",
+        "definition": "Before the Battle of Yavin — the primary dating convention used in Star Wars, counting years before the pivotal battle in Episode IV"
+      },
+      {
+        "term": "ABY",
+        "definition": "After the Battle of Yavin — the Star Wars dating convention for years following the Battle of Yavin in Episode IV"
+      },
+      {
+        "term": "homeworld",
+        "definition": "The planet of birth or primary origin for a person or species, referenced via hypermedia URL"
+      },
+      {
+        "term": "planet",
+        "definition": "A celestial body in the Star Wars universe that serves as a location for events, settlements, or origin of species and characters"
+      },
+      {
+        "term": "rotation_period",
+        "definition": "The number of standard hours it takes for a planet to complete one full rotation on its axis (equivalent to one local day)"
+      },
+      {
+        "term": "orbital_period",
+        "definition": "The number of standard days it takes for a planet to complete one full orbit around its local star (equivalent to one local year)"
+      },
+      {
+        "term": "surface_water",
+        "definition": "The percentage of a planet's surface covered by naturally occurring water or bodies of water"
+      },
+      {
+        "term": "species",
+        "definition": "A type of sentient life form in the Star Wars universe, classified by biology, designation, and cultural characteristics"
+      },
+      {
+        "term": "classification",
+        "definition": "The biological classification of a species (e.g., mammal, reptile, insectoid, artificial)"
+      },
+      {
+        "term": "designation",
+        "definition": "The cognitive status of a species, typically 'sentient' or 'semi-sentient'"
+      },
+      {
+        "term": "average_lifespan",
+        "definition": "The typical lifespan of a member of a given species, expressed in standard years"
+      },
+      {
+        "term": "starship",
+        "definition": "A spacecraft capable of interstellar travel (including hyperspace), distinguished from atmospheric-only vehicles"
+      },
+      {
+        "term": "hyperdrive_rating",
+        "definition": "The class rating of a starship's hyperdrive system; lower numbers indicate faster hyperspace travel (Class 0.5 is faster than Class 1.0)"
+      },
+      {
+        "term": "MGLT",
+        "definition": "Megalights per hour — the unit used to measure the sublight speed of a starship in normal space"
+      },
+      {
+        "term": "starship_class",
+        "definition": "The operational classification of a starship by role or size (e.g., Starfighter, Cruiser, Freighter, Deep Space Mobile Battlestation)"
+      },
+      {
+        "term": "vehicle",
+        "definition": "A non-starship conveyance used within planetary atmospheres or on the surface, such as speeders, walkers, or crawlers"
+      },
+      {
+        "term": "vehicle_class",
+        "definition": "The operational classification of a vehicle by type (e.g., wheeled, repulsorcraft, walker, airspeeder)"
+      },
+      {
+        "term": "cost_in_credits",
+        "definition": "The purchase price of a starship or vehicle when new, denominated in Galactic Credits"
+      },
+      {
+        "term": "cargo_capacity",
+        "definition": "The maximum payload in kilograms that a starship or vehicle can carry"
+      },
+      {
+        "term": "consumables",
+        "definition": "The maximum duration that a starship or vehicle can sustain its crew with food and water without resupply"
+      },
+      {
+        "term": "pilots",
+        "definition": "Individuals who have been recorded as having piloted a given starship or vehicle, referenced via hypermedia URLs"
+      },
+      {
+        "term": "crew",
+        "definition": "The minimum number of personnel required to operate a starship or vehicle"
+      },
+      {
+        "term": "passengers",
+        "definition": "The number of additional non-crew individuals a starship or vehicle can accommodate"
+      },
+      {
+        "term": "galactic_credits",
+        "definition": "The standard currency of the Galactic Republic and later the Galactic Empire, used as the monetary unit across most Star Wars transactions"
+      },
+      {
+        "term": "hypermedia_url",
+        "definition": "A fully-qualified URL returned by the API that links to a related resource, enabling traversal of the Star Wars data graph"
+      }
+    ]
+  }
+}

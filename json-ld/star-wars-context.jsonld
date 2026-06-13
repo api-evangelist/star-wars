@@ -1,0 +1,249 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://swapi.info/vocab/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "schema": "https://schema.org/",
+    "swapi": "https://swapi.info/vocab/",
+
+    "Film": "swapi:Film",
+    "Person": "swapi:Person",
+    "Planet": "swapi:Planet",
+    "Species": "swapi:Species",
+    "Starship": "swapi:Starship",
+    "Vehicle": "swapi:Vehicle",
+
+    "title": {
+      "@id": "schema:name",
+      "@type": "xsd:string"
+    },
+    "episode_id": {
+      "@id": "swapi:episodeId",
+      "@type": "xsd:integer"
+    },
+    "opening_crawl": {
+      "@id": "swapi:openingCrawl",
+      "@type": "xsd:string"
+    },
+    "director": {
+      "@id": "schema:director",
+      "@type": "xsd:string"
+    },
+    "producer": {
+      "@id": "schema:producer",
+      "@type": "xsd:string"
+    },
+    "release_date": {
+      "@id": "schema:datePublished",
+      "@type": "xsd:date"
+    },
+    "characters": {
+      "@id": "swapi:characters",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "planets": {
+      "@id": "swapi:planets",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "starships": {
+      "@id": "swapi:starships",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "vehicles": {
+      "@id": "swapi:vehicles",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "species": {
+      "@id": "swapi:species",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "name": {
+      "@id": "schema:name",
+      "@type": "xsd:string"
+    },
+    "height": {
+      "@id": "schema:height",
+      "@type": "xsd:string"
+    },
+    "mass": {
+      "@id": "schema:weight",
+      "@type": "xsd:string"
+    },
+    "hair_color": {
+      "@id": "swapi:hairColor",
+      "@type": "xsd:string"
+    },
+    "skin_color": {
+      "@id": "swapi:skinColor",
+      "@type": "xsd:string"
+    },
+    "eye_color": {
+      "@id": "swapi:eyeColor",
+      "@type": "xsd:string"
+    },
+    "birth_year": {
+      "@id": "swapi:birthYear",
+      "@type": "xsd:string"
+    },
+    "gender": {
+      "@id": "schema:gender",
+      "@type": "xsd:string"
+    },
+    "homeworld": {
+      "@id": "swapi:homeworld",
+      "@type": "@id"
+    },
+    "films": {
+      "@id": "swapi:films",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "residents": {
+      "@id": "swapi:residents",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "rotation_period": {
+      "@id": "swapi:rotationPeriod",
+      "@type": "xsd:string"
+    },
+    "orbital_period": {
+      "@id": "swapi:orbitalPeriod",
+      "@type": "xsd:string"
+    },
+    "diameter": {
+      "@id": "swapi:diameter",
+      "@type": "xsd:string"
+    },
+    "climate": {
+      "@id": "swapi:climate",
+      "@type": "xsd:string"
+    },
+    "gravity": {
+      "@id": "swapi:gravity",
+      "@type": "xsd:string"
+    },
+    "terrain": {
+      "@id": "swapi:terrain",
+      "@type": "xsd:string"
+    },
+    "surface_water": {
+      "@id": "swapi:surfaceWater",
+      "@type": "xsd:string"
+    },
+    "population": {
+      "@id": "schema:numberOfEmployees",
+      "@type": "xsd:string"
+    },
+    "classification": {
+      "@id": "swapi:classification",
+      "@type": "xsd:string"
+    },
+    "designation": {
+      "@id": "swapi:designation",
+      "@type": "xsd:string"
+    },
+    "average_height": {
+      "@id": "swapi:averageHeight",
+      "@type": "xsd:string"
+    },
+    "skin_colors": {
+      "@id": "swapi:skinColors",
+      "@type": "xsd:string"
+    },
+    "hair_colors": {
+      "@id": "swapi:hairColors",
+      "@type": "xsd:string"
+    },
+    "eye_colors": {
+      "@id": "swapi:eyeColors",
+      "@type": "xsd:string"
+    },
+    "average_lifespan": {
+      "@id": "swapi:averageLifespan",
+      "@type": "xsd:string"
+    },
+    "language": {
+      "@id": "schema:knowsLanguage",
+      "@type": "xsd:string"
+    },
+    "people": {
+      "@id": "swapi:people",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "model": {
+      "@id": "schema:model",
+      "@type": "xsd:string"
+    },
+    "manufacturer": {
+      "@id": "schema:manufacturer",
+      "@type": "xsd:string"
+    },
+    "cost_in_credits": {
+      "@id": "swapi:costInCredits",
+      "@type": "xsd:string"
+    },
+    "length": {
+      "@id": "swapi:length",
+      "@type": "xsd:string"
+    },
+    "max_atmosphering_speed": {
+      "@id": "swapi:maxAtmospheringSpeed",
+      "@type": "xsd:string"
+    },
+    "crew": {
+      "@id": "swapi:crew",
+      "@type": "xsd:string"
+    },
+    "passengers": {
+      "@id": "swapi:passengers",
+      "@type": "xsd:string"
+    },
+    "cargo_capacity": {
+      "@id": "swapi:cargoCapacity",
+      "@type": "xsd:string"
+    },
+    "consumables": {
+      "@id": "swapi:consumables",
+      "@type": "xsd:string"
+    },
+    "hyperdrive_rating": {
+      "@id": "swapi:hyperdriveRating",
+      "@type": "xsd:string"
+    },
+    "MGLT": {
+      "@id": "swapi:MGLT",
+      "@type": "xsd:string"
+    },
+    "starship_class": {
+      "@id": "swapi:starshipClass",
+      "@type": "xsd:string"
+    },
+    "vehicle_class": {
+      "@id": "swapi:vehicleClass",
+      "@type": "xsd:string"
+    },
+    "pilots": {
+      "@id": "swapi:pilots",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "created": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:dateTime"
+    },
+    "edited": {
+      "@id": "schema:dateModified",
+      "@type": "xsd:dateTime"
+    },
+    "url": {
+      "@id": "@id"
+    }
+  }
+}

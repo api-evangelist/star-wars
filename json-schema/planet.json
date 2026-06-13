@@ -1,0 +1,92 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/star-wars/main/json-schema/planet.json",
+  "title": "Planet",
+  "description": "A planet in the Star Wars universe",
+  "type": "object",
+  "required": [
+    "name",
+    "rotation_period",
+    "orbital_period",
+    "diameter",
+    "climate",
+    "gravity",
+    "terrain",
+    "surface_water",
+    "population",
+    "residents",
+    "films",
+    "created",
+    "edited",
+    "url"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of this planet"
+    },
+    "rotation_period": {
+      "type": "string",
+      "description": "The number of standard hours it takes for this planet to complete a single rotation on its axis"
+    },
+    "orbital_period": {
+      "type": "string",
+      "description": "The number of standard days it takes for this planet to complete a single orbit of its local star"
+    },
+    "diameter": {
+      "type": "string",
+      "description": "The diameter of this planet in kilometers"
+    },
+    "climate": {
+      "type": "string",
+      "description": "The climate of this planet. Comma-separated if diverse"
+    },
+    "gravity": {
+      "type": "string",
+      "description": "A number denoting the gravity of this planet, where 1 is normal or 1 standard G. 'unknown' if not known"
+    },
+    "terrain": {
+      "type": "string",
+      "description": "The terrain of this planet. Comma-separated if diverse"
+    },
+    "surface_water": {
+      "type": "string",
+      "description": "The percentage of the planet surface that is naturally occurring water or bodies of water"
+    },
+    "population": {
+      "type": "string",
+      "description": "The average population of sentient beings inhabiting this planet"
+    },
+    "residents": {
+      "type": "array",
+      "description": "URLs of People resources that live on this planet",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "films": {
+      "type": "array",
+      "description": "URLs of Film resources that this planet has appeared in",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "created": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 date-time when this resource was created"
+    },
+    "edited": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 date-time when this resource was last edited"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "The hypermedia URL of this resource"
+    }
+  }
+}

@@ -52,6 +52,8 @@ apis:
         url: https://swapi.info/documentation
       - type: Playground
         url: https://swapi.info/playground
+      - type: OpenAPI
+        url: https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/openapi/star-wars-openapi.json
       - type: Plans
         url: https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/plans/star-wars-plans-pricing.yml
       - type: RateLimits

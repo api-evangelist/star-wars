@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/star-wars/main/json-schema/species.json",
+  "title": "Species",
+  "description": "A species in the Star Wars universe",
+  "type": "object",
+  "required": [
+    "name",
+    "classification",
+    "designation",
+    "average_height",
+    "skin_colors",
+    "hair_colors",
+    "eye_colors",
+    "average_lifespan",
+    "homeworld",
+    "language",
+    "people",
+    "films",
+    "created",
+    "edited",
+    "url"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of this species"
+    },
+    "classification": {
+      "type": "string",
+      "description": "The classification of this species, such as 'mammal' or 'reptile'"
+    },
+    "designation": {
+      "type": "string",
+      "description": "The designation of this species, such as 'sentient'"
+    },
+    "average_height": {
+      "type": "string",
+      "description": "The average height of this species in centimeters"
+    },
+    "skin_colors": {
+      "type": "string",
+      "description": "A comma-separated string of common skin colors for this species, 'none' if this species does not typically have skin"
+    },
+    "hair_colors": {
+      "type": "string",
+      "description": "A comma-separated string of common hair colors for this species, 'none' if this species does not typically have hair"
+    },
+    "eye_colors": {
+      "type": "string",
+      "description": "A comma-separated string of common eye colors for this species, 'none' if this species does not typically have eyes"
+    },
+    "average_lifespan": {
+      "type": "string",
+      "description": "The average lifespan of this species in years"
+    },
+    "homeworld": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL of a planet resource that this species originates from"
+    },
+    "language": {
+      "type": "string",
+      "description": "The language commonly spoken by this species"
+    },
+    "people": {
+      "type": "array",
+      "description": "URLs of People resources that are a part of this species",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "films": {
+      "type": "array",
+      "description": "URLs of Film resources that this species has appeared in",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "created": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 date-time when this resource was created"
+    },
+    "edited": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 date-time when this resource was last edited"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "The hypermedia URL of this resource"
+    }
+  }
+}

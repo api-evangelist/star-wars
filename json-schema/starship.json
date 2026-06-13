@@ -1,0 +1,112 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/star-wars/main/json-schema/starship.json",
+  "title": "Starship",
+  "description": "A starship in the Star Wars universe",
+  "type": "object",
+  "required": [
+    "name",
+    "model",
+    "manufacturer",
+    "cost_in_credits",
+    "length",
+    "max_atmosphering_speed",
+    "crew",
+    "passengers",
+    "cargo_capacity",
+    "consumables",
+    "hyperdrive_rating",
+    "MGLT",
+    "starship_class",
+    "pilots",
+    "films",
+    "created",
+    "edited",
+    "url"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of this starship. The common name, such as 'Death Star'"
+    },
+    "model": {
+      "type": "string",
+      "description": "The model or official name of this starship"
+    },
+    "manufacturer": {
+      "type": "string",
+      "description": "The manufacturer of this starship. Comma-separated if more than one"
+    },
+    "cost_in_credits": {
+      "type": "string",
+      "description": "The cost of this starship new, in galactic credits"
+    },
+    "length": {
+      "type": "string",
+      "description": "The length of this starship in meters"
+    },
+    "max_atmosphering_speed": {
+      "type": "string",
+      "description": "The maximum speed of this starship in the atmosphere. 'N/A' if this starship is incapable of atmospheric flight"
+    },
+    "crew": {
+      "type": "string",
+      "description": "The number of personnel needed to run or pilot this starship"
+    },
+    "passengers": {
+      "type": "string",
+      "description": "The number of non-essential people this starship can transport"
+    },
+    "cargo_capacity": {
+      "type": "string",
+      "description": "The maximum number of kilograms that this starship can transport"
+    },
+    "consumables": {
+      "type": "string",
+      "description": "The maximum length of time that this starship can provide consumables for its entire crew without having to resupply"
+    },
+    "hyperdrive_rating": {
+      "type": "string",
+      "description": "The class of this starship's hyperdrive"
+    },
+    "MGLT": {
+      "type": "string",
+      "description": "The Maximum number of Megalights this starship can travel in a standard hour"
+    },
+    "starship_class": {
+      "type": "string",
+      "description": "The class of this starship, such as 'Starfighter' or 'Deep Space Mobile Battlestation'"
+    },
+    "pilots": {
+      "type": "array",
+      "description": "URLs of People resources that have piloted this starship",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "films": {
+      "type": "array",
+      "description": "URLs of Film resources that this starship has appeared in",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "created": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 date-time when this resource was created"
+    },
+    "edited": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 date-time when this resource was last edited"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "The hypermedia URL of this resource"
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/star-wars/main/json-schema/person.json",
+  "title": "Person",
+  "description": "A person or character within the Star Wars universe",
+  "type": "object",
+  "required": [
+    "name",
+    "height",
+    "mass",
+    "hair_color",
+    "skin_color",
+    "eye_color",
+    "birth_year",
+    "gender",
+    "homeworld",
+    "films",
+    "species",
+    "vehicles",
+    "starships",
+    "created",
+    "edited",
+    "url"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of this person"
+    },
+    "height": {
+      "type": "string",
+      "description": "The height of the person in centimeters"
+    },
+    "mass": {
+      "type": "string",
+      "description": "The mass of the person in kilograms"
+    },
+    "hair_color": {
+      "type": "string",
+      "description": "The hair color of this person. Will be 'unknown' if not known or 'n/a' if the person does not have hair"
+    },
+    "skin_color": {
+      "type": "string",
+      "description": "The skin color of this person"
+    },
+    "eye_color": {
+      "type": "string",
+      "description": "The eye color of this person. Will be 'unknown' if not known or 'n/a' if the person does not have eyes"
+    },
+    "birth_year": {
+      "type": "string",
+      "description": "The birth year of the person, using the in-universe standard of BBY or ABY - Before the Battle of Yavin or After the Battle of Yavin"
+    },
+    "gender": {
+      "type": "string",
+      "description": "The gender of this person. Either 'male', 'female' or 'unknown', 'n/a' if the person does not have a gender"
+    },
+    "homeworld": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL of the planet resource that this person was born on"
+    },
+    "films": {
+      "type": "array",
+      "description": "URLs of film resources this person has been in",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "species": {
+      "type": "array",
+      "description": "URLs of species resources that this person belongs to",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "vehicles": {
+      "type": "array",
+      "description": "URLs of vehicle resources that this person has piloted",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "starships": {
+      "type": "array",
+      "description": "URLs of starship resources that this person has piloted",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "created": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 date-time when this resource was created"
+    },
+    "edited": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 date-time when this resource was last edited"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "The hypermedia URL of this resource"
+    }
+  }
+}

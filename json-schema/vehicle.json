@@ -1,0 +1,102 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/star-wars/main/json-schema/vehicle.json",
+  "title": "Vehicle",
+  "description": "A vehicle in the Star Wars universe",
+  "type": "object",
+  "required": [
+    "name",
+    "model",
+    "manufacturer",
+    "cost_in_credits",
+    "length",
+    "max_atmosphering_speed",
+    "crew",
+    "passengers",
+    "cargo_capacity",
+    "consumables",
+    "vehicle_class",
+    "pilots",
+    "films",
+    "created",
+    "edited",
+    "url"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of this vehicle. The common name, such as 'Sand Crawler'"
+    },
+    "model": {
+      "type": "string",
+      "description": "The model or official name of this vehicle"
+    },
+    "manufacturer": {
+      "type": "string",
+      "description": "The manufacturer of this vehicle. Comma-separated if more than one"
+    },
+    "cost_in_credits": {
+      "type": "string",
+      "description": "The cost of this vehicle new, in Galactic Credits"
+    },
+    "length": {
+      "type": "string",
+      "description": "The length of this vehicle in meters"
+    },
+    "max_atmosphering_speed": {
+      "type": "string",
+      "description": "The maximum speed of this vehicle in the atmosphere"
+    },
+    "crew": {
+      "type": "string",
+      "description": "The number of personnel needed to run or pilot this vehicle"
+    },
+    "passengers": {
+      "type": "string",
+      "description": "The number of non-essential people this vehicle can transport"
+    },
+    "cargo_capacity": {
+      "type": "string",
+      "description": "The maximum number of kilograms that this vehicle can transport"
+    },
+    "consumables": {
+      "type": "string",
+      "description": "The maximum length of time that this vehicle can provide consumables for its entire crew without having to resupply"
+    },
+    "vehicle_class": {
+      "type": "string",
+      "description": "The class of this vehicle, such as 'wheeled' or 'repulsorcraft'"
+    },
+    "pilots": {
+      "type": "array",
+      "description": "URLs of People resources that have piloted this vehicle",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "films": {
+      "type": "array",
+      "description": "URLs of Film resources that this vehicle has appeared in",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "created": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 date-time when this resource was created"
+    },
+    "edited": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 date-time when this resource was last edited"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "The hypermedia URL of this resource"
+    }
+  }
+}
