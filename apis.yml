@@ -11,7 +11,7 @@ description: >
   iteration at swapi.info was rebuilt by Sivaram P as a CDN-powered,
   file-based API serving over one million daily requests with sub-50ms global
   response times via Vercel and Cloudflare.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
@@ -35,7 +35,7 @@ apis:
       including films, people, planets, species, starships, and vehicles.
       Responses are JSON with hypermedia URL linking between related resources.
       No authentication is required.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://swapi.info
     baseURL: https://swapi.info/api
     tags:
