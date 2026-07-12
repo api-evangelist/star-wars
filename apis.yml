@@ -61,6 +61,8 @@ apis:
       - type: FinOps
         url: https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/finops/star-wars-finops.yml
 common:
+  - type: DomainSecurity
+    url: security/star-wars-domain-security.yml
   - type: Website
     url: https://swapi.info
   - type: Documentation
