@@ -1,0 +1,154 @@
+openapi: 3.0.3
+info:
+  title: Star Wars REST API (SWAPI) Films API
+  description: The Star Wars REST API (swapi.info) is the world's first quantified and programmatically-accessible data source for all the data from the Star Wars canon universe. It provides structured JSON access to films, characters (people), starships, vehicles, planets, and species. No authentication is required.
+  version: 1.0.0
+  contact:
+    name: SWAPI
+    url: https://swapi.info
+  license:
+    name: MIT
+    url: https://github.com/SivaramPg/swapi.info/blob/main/LICENSE
+servers:
+- url: https://swapi.info/api
+  description: Production server
+tags:
+- name: Films
+  description: Star Wars films
+paths:
+  /films:
+    get:
+      operationId: listFilms
+      summary: List all films
+      description: Retrieve a list of all Star Wars films.
+      tags:
+      - Films
+      responses:
+        '200':
+          description: A list of films
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Film'
+  /films/{id}:
+    get:
+      operationId: getFilm
+      summary: Get a film by ID
+      description: Retrieve a single Star Wars film by its numeric ID.
+      tags:
+      - Films
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+        description: The numeric ID of the film
+      responses:
+        '200':
+          description: A single film
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Film'
+        '404':
+          description: Film not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+components:
+  schemas:
+    Film:
+      type: object
+      description: A Star Wars film
+      required:
+      - title
+      - episode_id
+      - opening_crawl
+      - director
+      - producer
+      - release_date
+      - characters
+      - planets
+      - starships
+      - vehicles
+      - species
+      - created
+      - edited
+      - url
+      properties:
+        title:
+          type: string
+          description: The title of this film
+          example: A New Hope
+        episode_id:
+          type: integer
+          description: The episode number of this film
+          example: 4
+        opening_crawl:
+          type: string
+          description: The opening paragraphs at the beginning of this film
+        director:
+          type: string
+          description: The name of the director of this film
+          example: George Lucas
+        producer:
+          type: string
+          description: The name(s) of the producer(s) of this film
+          example: Gary Kurtz, Rick McCallum
+        release_date:
+          type: string
+          format: date
+          description: The ISO 8601 date format of film release
+          example: '1977-05-25'
+        characters:
+          type: array
+          description: URLs of character resources featured in this film
+          items:
+            type: string
+            format: uri
+        planets:
+          type: array
+          description: URLs of planet resources featured in this film
+          items:
+            type: string
+            format: uri
+        starships:
+          type: array
+          description: URLs of starship resources featured in this film
+          items:
+            type: string
+            format: uri
+        vehicles:
+          type: array
+          description: URLs of vehicle resources featured in this film
+          items:
+            type: string
+            format: uri
+        species:
+          type: array
+          description: URLs of species resources featured in this film
+          items:
+            type: string
+            format: uri
+        created:
+          type: string
+          format: date-time
+          description: ISO 8601 date-time when this resource was created
+        edited:
+          type: string
+          format: date-time
+          description: ISO 8601 date-time when this resource was last edited
+        url:
+          type: string
+          format: uri
+          description: The hypermedia URL of this resource
+    NotFound:
+      type: object
+      properties:
+        detail:
+          type: string
+          example: Not found

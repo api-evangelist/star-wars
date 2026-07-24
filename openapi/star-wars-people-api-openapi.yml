@@ -1,0 +1,162 @@
+openapi: 3.0.3
+info:
+  title: Star Wars REST API (SWAPI) Films People API
+  description: The Star Wars REST API (swapi.info) is the world's first quantified and programmatically-accessible data source for all the data from the Star Wars canon universe. It provides structured JSON access to films, characters (people), starships, vehicles, planets, and species. No authentication is required.
+  version: 1.0.0
+  contact:
+    name: SWAPI
+    url: https://swapi.info
+  license:
+    name: MIT
+    url: https://github.com/SivaramPg/swapi.info/blob/main/LICENSE
+servers:
+- url: https://swapi.info/api
+  description: Production server
+tags:
+- name: People
+  description: People and characters in the Star Wars universe
+paths:
+  /people:
+    get:
+      operationId: listPeople
+      summary: List all people
+      description: Retrieve a list of all people (characters) in the Star Wars universe.
+      tags:
+      - People
+      responses:
+        '200':
+          description: A list of people
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Person'
+  /people/{id}:
+    get:
+      operationId: getPerson
+      summary: Get a person by ID
+      description: Retrieve a single Star Wars character by their numeric ID.
+      tags:
+      - People
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+        description: The numeric ID of the person
+      responses:
+        '200':
+          description: A single person
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Person'
+        '404':
+          description: Person not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+components:
+  schemas:
+    Person:
+      type: object
+      description: A person/character in the Star Wars universe
+      required:
+      - name
+      - height
+      - mass
+      - hair_color
+      - skin_color
+      - eye_color
+      - birth_year
+      - gender
+      - homeworld
+      - films
+      - species
+      - vehicles
+      - starships
+      - created
+      - edited
+      - url
+      properties:
+        name:
+          type: string
+          description: The name of this person
+          example: Luke Skywalker
+        height:
+          type: string
+          description: The height of the person in centimeters
+          example: '172'
+        mass:
+          type: string
+          description: The mass of the person in kilograms
+          example: '77'
+        hair_color:
+          type: string
+          description: The hair color of this person
+          example: blond
+        skin_color:
+          type: string
+          description: The skin color of this person
+          example: fair
+        eye_color:
+          type: string
+          description: The eye color of this person
+          example: blue
+        birth_year:
+          type: string
+          description: The birth year of the person using the in-universe standard of BBY or ABY
+          example: 19BBY
+        gender:
+          type: string
+          description: The gender of this person
+          example: male
+        homeworld:
+          type: string
+          format: uri
+          description: URL of the planet resource that this person was born on
+        films:
+          type: array
+          description: URLs of film resources this person has been in
+          items:
+            type: string
+            format: uri
+        species:
+          type: array
+          description: URLs of species resources this person belongs to
+          items:
+            type: string
+            format: uri
+        vehicles:
+          type: array
+          description: URLs of vehicle resources this person has piloted
+          items:
+            type: string
+            format: uri
+        starships:
+          type: array
+          description: URLs of starship resources this person has piloted
+          items:
+            type: string
+            format: uri
+        created:
+          type: string
+          format: date-time
+          description: ISO 8601 date-time when this resource was created
+        edited:
+          type: string
+          format: date-time
+          description: ISO 8601 date-time when this resource was last edited
+        url:
+          type: string
+          format: uri
+          description: The hypermedia URL of this resource
+    NotFound:
+      type: object
+      properties:
+        detail:
+          type: string
+          example: Not found

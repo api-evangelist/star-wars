@@ -1,0 +1,153 @@
+openapi: 3.0.3
+info:
+  title: Star Wars REST API (SWAPI) Films Species API
+  description: The Star Wars REST API (swapi.info) is the world's first quantified and programmatically-accessible data source for all the data from the Star Wars canon universe. It provides structured JSON access to films, characters (people), starships, vehicles, planets, and species. No authentication is required.
+  version: 1.0.0
+  contact:
+    name: SWAPI
+    url: https://swapi.info
+  license:
+    name: MIT
+    url: https://github.com/SivaramPg/swapi.info/blob/main/LICENSE
+servers:
+- url: https://swapi.info/api
+  description: Production server
+tags:
+- name: Species
+  description: Species in the Star Wars universe
+paths:
+  /species:
+    get:
+      operationId: listSpecies
+      summary: List all species
+      description: Retrieve a list of all species in the Star Wars universe.
+      tags:
+      - Species
+      responses:
+        '200':
+          description: A list of species
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Species'
+  /species/{id}:
+    get:
+      operationId: getSpecies
+      summary: Get a species by ID
+      description: Retrieve a single Star Wars species by its numeric ID.
+      tags:
+      - Species
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+        description: The numeric ID of the species
+      responses:
+        '200':
+          description: A single species
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Species'
+        '404':
+          description: Species not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+components:
+  schemas:
+    Species:
+      type: object
+      description: A species in the Star Wars universe
+      required:
+      - name
+      - classification
+      - designation
+      - average_height
+      - skin_colors
+      - hair_colors
+      - eye_colors
+      - average_lifespan
+      - homeworld
+      - language
+      - people
+      - films
+      - created
+      - edited
+      - url
+      properties:
+        name:
+          type: string
+          description: The name of this species
+          example: Human
+        classification:
+          type: string
+          description: The classification of this species
+          example: mammal
+        designation:
+          type: string
+          description: The designation of this species
+          example: sentient
+        average_height:
+          type: string
+          description: The average height of this species in centimeters
+          example: '180'
+        skin_colors:
+          type: string
+          description: A comma-separated string of common skin colors for this species
+          example: caucasian, black, asian, hispanic
+        hair_colors:
+          type: string
+          description: A comma-separated string of common hair colors for this species
+          example: blonde, brown, black, red
+        eye_colors:
+          type: string
+          description: A comma-separated string of common eye colors for this species
+          example: brown, blue, green, hazel, grey, amber
+        average_lifespan:
+          type: string
+          description: The average lifespan of this species in years
+          example: '120'
+        homeworld:
+          type: string
+          format: uri
+          description: URL of a planet resource that this species originates from
+        language:
+          type: string
+          description: The language commonly spoken by this species
+          example: Galactic Basic
+        people:
+          type: array
+          description: URLs of People resources that are a part of this species
+          items:
+            type: string
+            format: uri
+        films:
+          type: array
+          description: URLs of Film resources that this species has appeared in
+          items:
+            type: string
+            format: uri
+        created:
+          type: string
+          format: date-time
+          description: ISO 8601 date-time when this resource was created
+        edited:
+          type: string
+          format: date-time
+          description: ISO 8601 date-time when this resource was last edited
+        url:
+          type: string
+          format: uri
+          description: The hypermedia URL of this resource
+    NotFound:
+      type: object
+      properties:
+        detail:
+          type: string
+          example: Not found

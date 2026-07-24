@@ -1,0 +1,168 @@
+openapi: 3.0.3
+info:
+  title: Star Wars REST API (SWAPI) Films Starships API
+  description: The Star Wars REST API (swapi.info) is the world's first quantified and programmatically-accessible data source for all the data from the Star Wars canon universe. It provides structured JSON access to films, characters (people), starships, vehicles, planets, and species. No authentication is required.
+  version: 1.0.0
+  contact:
+    name: SWAPI
+    url: https://swapi.info
+  license:
+    name: MIT
+    url: https://github.com/SivaramPg/swapi.info/blob/main/LICENSE
+servers:
+- url: https://swapi.info/api
+  description: Production server
+tags:
+- name: Starships
+  description: Starships in the Star Wars universe
+paths:
+  /starships:
+    get:
+      operationId: listStarships
+      summary: List all starships
+      description: Retrieve a list of all starships in the Star Wars universe.
+      tags:
+      - Starships
+      responses:
+        '200':
+          description: A list of starships
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Starship'
+  /starships/{id}:
+    get:
+      operationId: getStarship
+      summary: Get a starship by ID
+      description: Retrieve a single Star Wars starship by its numeric ID.
+      tags:
+      - Starships
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+        description: The numeric ID of the starship
+      responses:
+        '200':
+          description: A single starship
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Starship'
+        '404':
+          description: Starship not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+components:
+  schemas:
+    Starship:
+      type: object
+      description: A starship in the Star Wars universe
+      required:
+      - name
+      - model
+      - manufacturer
+      - cost_in_credits
+      - length
+      - max_atmosphering_speed
+      - crew
+      - passengers
+      - cargo_capacity
+      - consumables
+      - hyperdrive_rating
+      - MGLT
+      - starship_class
+      - pilots
+      - films
+      - created
+      - edited
+      - url
+      properties:
+        name:
+          type: string
+          description: The name of this starship
+          example: Death Star
+        model:
+          type: string
+          description: The model or official name of this starship
+          example: DS-1 Orbital Battle Station
+        manufacturer:
+          type: string
+          description: The manufacturer of this starship
+          example: Imperial Department of Military Research, Sienar Fleet Systems
+        cost_in_credits:
+          type: string
+          description: The cost of this starship new, in galactic credits
+          example: '1000000000000'
+        length:
+          type: string
+          description: The length of this starship in meters
+          example: '120000'
+        max_atmosphering_speed:
+          type: string
+          description: The maximum speed of this starship in the atmosphere
+          example: n/a
+        crew:
+          type: string
+          description: The number of personnel needed to run or pilot this starship
+          example: 342,953
+        passengers:
+          type: string
+          description: The number of non-essential people this starship can transport
+          example: 843,342
+        cargo_capacity:
+          type: string
+          description: The maximum number of kilograms that this starship can transport
+          example: '1000000000000'
+        consumables:
+          type: string
+          description: The maximum length of time that this starship can provide consumables for its crew
+          example: 3 years
+        hyperdrive_rating:
+          type: string
+          description: The class of this starship's hyperdrive
+          example: '4.0'
+        MGLT:
+          type: string
+          description: The Maximum number of Megalights this starship can travel in a standard hour
+          example: '10'
+        starship_class:
+          type: string
+          description: The class of this starship
+          example: Deep Space Mobile Battlestation
+        pilots:
+          type: array
+          description: URLs of People resources that have piloted this starship
+          items:
+            type: string
+            format: uri
+        films:
+          type: array
+          description: URLs of Film resources that this starship has appeared in
+          items:
+            type: string
+            format: uri
+        created:
+          type: string
+          format: date-time
+          description: ISO 8601 date-time when this resource was created
+        edited:
+          type: string
+          format: date-time
+          description: ISO 8601 date-time when this resource was last edited
+        url:
+          type: string
+          format: uri
+          description: The hypermedia URL of this resource
+    NotFound:
+      type: object
+      properties:
+        detail:
+          type: string
+          example: Not found

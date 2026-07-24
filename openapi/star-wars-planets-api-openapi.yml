@@ -1,0 +1,148 @@
+openapi: 3.0.3
+info:
+  title: Star Wars REST API (SWAPI) Films Planets API
+  description: The Star Wars REST API (swapi.info) is the world's first quantified and programmatically-accessible data source for all the data from the Star Wars canon universe. It provides structured JSON access to films, characters (people), starships, vehicles, planets, and species. No authentication is required.
+  version: 1.0.0
+  contact:
+    name: SWAPI
+    url: https://swapi.info
+  license:
+    name: MIT
+    url: https://github.com/SivaramPg/swapi.info/blob/main/LICENSE
+servers:
+- url: https://swapi.info/api
+  description: Production server
+tags:
+- name: Planets
+  description: Planets in the Star Wars universe
+paths:
+  /planets:
+    get:
+      operationId: listPlanets
+      summary: List all planets
+      description: Retrieve a list of all planets in the Star Wars universe.
+      tags:
+      - Planets
+      responses:
+        '200':
+          description: A list of planets
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Planet'
+  /planets/{id}:
+    get:
+      operationId: getPlanet
+      summary: Get a planet by ID
+      description: Retrieve a single Star Wars planet by its numeric ID.
+      tags:
+      - Planets
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+        description: The numeric ID of the planet
+      responses:
+        '200':
+          description: A single planet
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Planet'
+        '404':
+          description: Planet not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+components:
+  schemas:
+    Planet:
+      type: object
+      description: A planet in the Star Wars universe
+      required:
+      - name
+      - rotation_period
+      - orbital_period
+      - diameter
+      - climate
+      - gravity
+      - terrain
+      - surface_water
+      - population
+      - residents
+      - films
+      - created
+      - edited
+      - url
+      properties:
+        name:
+          type: string
+          description: The name of this planet
+          example: Tatooine
+        rotation_period:
+          type: string
+          description: The number of standard hours it takes for this planet to complete a single rotation on its axis
+          example: '23'
+        orbital_period:
+          type: string
+          description: The number of standard days it takes for this planet to complete a single orbit of its local star
+          example: '304'
+        diameter:
+          type: string
+          description: The diameter of this planet in kilometers
+          example: '10465'
+        climate:
+          type: string
+          description: The climate of this planet
+          example: arid
+        gravity:
+          type: string
+          description: A number denoting the gravity of this planet, where '1' is normal or 1 standard G
+          example: 1 standard
+        terrain:
+          type: string
+          description: The terrain of this planet
+          example: desert
+        surface_water:
+          type: string
+          description: The percentage of the planet surface that is naturally occurring water or bodies of water
+          example: '1'
+        population:
+          type: string
+          description: The average population of sentient beings inhabiting this planet
+          example: '200000'
+        residents:
+          type: array
+          description: URLs of People resources that live on this planet
+          items:
+            type: string
+            format: uri
+        films:
+          type: array
+          description: URLs of Film resources that this planet has appeared in
+          items:
+            type: string
+            format: uri
+        created:
+          type: string
+          format: date-time
+          description: ISO 8601 date-time when this resource was created
+        edited:
+          type: string
+          format: date-time
+          description: ISO 8601 date-time when this resource was last edited
+        url:
+          type: string
+          format: uri
+          description: The hypermedia URL of this resource
+    NotFound:
+      type: object
+      properties:
+        detail:
+          type: string
+          example: Not found
