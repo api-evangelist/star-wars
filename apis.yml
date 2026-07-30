@@ -11,7 +11,19 @@ description: >
   iteration at swapi.info was rebuilt by Sivaram P as a CDN-powered,
   file-based API serving over one million daily requests with sub-50ms global
   response times via Vercel and Cloudflare.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: free
+  onboarding: open
+  trial: false
+  try_now: true
+  public: true
+  label: Free · Open access
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/star-wars.png
 url: https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
@@ -28,38 +40,144 @@ tags:
   - Species
   - Open Source
 apis:
-  - aid: star-wars:star-wars-api
-    name: Star Wars REST API
-    description: >
-      A REST API providing GET-only access to canonical Star Wars universe data
-      including films, people, planets, species, starships, and vehicles.
-      Responses are JSON with hypermedia URL linking between related resources.
-      No authentication is required.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://swapi.info
-    baseURL: https://swapi.info/api
-    tags:
-      - Star Wars
-      - REST
-      - Films
-      - People
-      - Planets
-      - Species
-      - Starships
-      - Vehicles
-    properties:
-      - type: Documentation
-        url: https://swapi.info/documentation
-      - type: Playground
-        url: https://swapi.info/playground
-      - type: OpenAPI
-        url: https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/openapi/star-wars-openapi.json
-      - type: Plans
-        url: https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/plans/star-wars-plans-pricing.yml
-      - type: RateLimits
-        url: https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/rate-limits/star-wars-rate-limits.yml
-      - type: FinOps
-        url: https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/finops/star-wars-finops.yml
+- aid: star-wars:star-wars-films-api
+  name: Star Wars API Films API
+  description: Star Wars films
+  humanURL: https://swapi.info
+  baseURL: https://swapi.info/api
+  tags:
+  - Films
+  properties:
+  - type: OpenAPI
+    url: openapi/star-wars-films-api-openapi.yml
+  - type: Documentation
+    url: https://swapi.info/documentation
+  - type: Playground
+    url: https://swapi.info/playground
+  - type: Plans
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/plans/star-wars-plans-pricing.yml
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/rate-limits/star-wars-rate-limits.yml
+  - type: FinOps
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/finops/star-wars-finops.yml
+- aid: star-wars:star-wars-people-api
+  name: Star Wars API People API
+  description: People and characters in the Star Wars universe
+  humanURL: https://swapi.info
+  baseURL: https://swapi.info/api
+  tags:
+  - People
+  properties:
+  - type: OpenAPI
+    url: openapi/star-wars-people-api-openapi.yml
+  - type: Documentation
+    url: https://swapi.info/documentation
+  - type: Playground
+    url: https://swapi.info/playground
+  - type: Plans
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/plans/star-wars-plans-pricing.yml
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/rate-limits/star-wars-rate-limits.yml
+  - type: FinOps
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/finops/star-wars-finops.yml
+- aid: star-wars:star-wars-planets-api
+  name: Star Wars API Planets API
+  description: Planets in the Star Wars universe
+  humanURL: https://swapi.info
+  baseURL: https://swapi.info/api
+  tags:
+  - Planets
+  properties:
+  - type: OpenAPI
+    url: openapi/star-wars-planets-api-openapi.yml
+  - type: Documentation
+    url: https://swapi.info/documentation
+  - type: Playground
+    url: https://swapi.info/playground
+  - type: Plans
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/plans/star-wars-plans-pricing.yml
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/rate-limits/star-wars-rate-limits.yml
+  - type: FinOps
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/finops/star-wars-finops.yml
+- aid: star-wars:star-wars-species-api
+  name: Star Wars API Species API
+  description: Species in the Star Wars universe
+  humanURL: https://swapi.info
+  baseURL: https://swapi.info/api
+  tags:
+  - Species
+  properties:
+  - type: OpenAPI
+    url: openapi/star-wars-species-api-openapi.yml
+  - type: Documentation
+    url: https://swapi.info/documentation
+  - type: Playground
+    url: https://swapi.info/playground
+  - type: Plans
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/plans/star-wars-plans-pricing.yml
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/rate-limits/star-wars-rate-limits.yml
+  - type: FinOps
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/finops/star-wars-finops.yml
+- aid: star-wars:star-wars-starships-api
+  name: Star Wars API Starships API
+  description: Starships in the Star Wars universe
+  humanURL: https://swapi.info
+  baseURL: https://swapi.info/api
+  tags:
+  - Starships
+  properties:
+  - type: OpenAPI
+    url: openapi/star-wars-starships-api-openapi.yml
+  - type: Documentation
+    url: https://swapi.info/documentation
+  - type: Playground
+    url: https://swapi.info/playground
+  - type: Plans
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/plans/star-wars-plans-pricing.yml
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/rate-limits/star-wars-rate-limits.yml
+  - type: FinOps
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/finops/star-wars-finops.yml
+- aid: star-wars:star-wars-vehicles-api
+  name: Star Wars API Vehicles API
+  description: Vehicles in the Star Wars universe
+  humanURL: https://swapi.info
+  baseURL: https://swapi.info/api
+  tags:
+  - Vehicles
+  properties:
+  - type: OpenAPI
+    url: openapi/star-wars-vehicles-api-openapi.yml
+  - type: Documentation
+    url: https://swapi.info/documentation
+  - type: Playground
+    url: https://swapi.info/playground
+  - type: Plans
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/plans/star-wars-plans-pricing.yml
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/rate-limits/star-wars-rate-limits.yml
+  - type: FinOps
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/star-wars/refs/heads/main/finops/star-wars-finops.yml
 common:
   - type: AgenticAccess
     url: agentic-access/star-wars-agentic-access.yml
