@@ -1,0 +1,24 @@
+{
+  "provider": "star-wars",
+  "sources": [
+    "star-wars-films-api-openapi.yml",
+    "star-wars-people-api-openapi.yml",
+    "star-wars-planets-api-openapi.yml",
+    "star-wars-species-api-openapi.yml",
+    "star-wars-starships-api-openapi.yml",
+    "star-wars-vehicles-api-openapi.yml"
+  ],
+  "outputs": [
+    "star-wars-films-api-openapi.yml",
+    "star-wars-people-api-openapi.yml",
+    "star-wars-planets-api-openapi.yml",
+    "star-wars-species-api-openapi.yml",
+    "star-wars-starships-api-openapi.yml",
+    "star-wars-vehicles-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
