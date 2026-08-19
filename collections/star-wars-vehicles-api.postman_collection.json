@@ -1,0 +1,234 @@
+{
+  "item": [
+    {
+      "id": "1205e1bb-01a7-4c43-a067-737a2d1924be",
+      "name": "Vehicles",
+      "description": {
+        "content": "Vehicles in the Star Wars universe",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9fb7acae-3d83-4323-8ca1-9d8b76d06112",
+          "name": "List all vehicles",
+          "request": {
+            "name": "List all vehicles",
+            "description": {
+              "content": "Retrieve a list of all vehicles in the Star Wars universe.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "vehicles"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a47384fe-9cd5-4339-a0dd-15bf639735b8",
+              "name": "A list of vehicles",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "vehicles"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"name\": \"Sand Crawler\",\n    \"model\": \"Digger Crawler\",\n    \"manufacturer\": \"Corellia Mining Corporation\",\n    \"cost_in_credits\": \"150000\",\n    \"length\": \"36.8\",\n    \"max_atmosphering_speed\": \"30\",\n    \"crew\": \"46\",\n    \"passengers\": \"30\",\n    \"cargo_capacity\": \"50000\",\n    \"consumables\": \"2 months\",\n    \"vehicle_class\": \"wheeled\",\n    \"pilots\": [\n      \"https://DbgShuZKdzgQmKEUtPnDYwyqjKu.uqlmgj3E++EPRg7Rejtw+y4Q84uG-Vv6UlHGZ4zopPrWnPtry.ureXYX+2srLcgImL2V\",\n      \"https://uqT.nauygS8p3kmUKbzSGJdEpTyG3IvKl9c+B2fd2RmVT5\"\n    ],\n    \"films\": [\n      \"https://ZRGRWUKhUQ.cbluU2ZbiCbZWpqcu+d+QvKbB5eyU0m4ofz905gq6ovRr8jCN2BCoCHm,zjF1-mGNtah1aj7cUiL\",\n      \"http://goRhsDrBJpgIFagoEuLBZSngGkVyGlz.bpmkf2D7SMMrHzDLpeMRBhZSmlDeAceZJeV-vmmMKivttNTVlrsr\"\n    ],\n    \"created\": \"1983-02-17T05:18:28.083Z\",\n    \"edited\": \"2004-12-01T10:23:54.591Z\",\n    \"url\": \"http://hDOaNrvrUupsCoMkwfgksQLKEfwptSSuV.gtc4B6QIvYk.XllQp1BCMu6lG8FDm5BIQEkRCx87ei\"\n  },\n  {\n    \"name\": \"Sand Crawler\",\n    \"model\": \"Digger Crawler\",\n    \"manufacturer\": \"Corellia Mining Corporation\",\n    \"cost_in_credits\": \"150000\",\n    \"length\": \"36.8\",\n    \"max_atmosphering_speed\": \"30\",\n    \"crew\": \"46\",\n    \"passengers\": \"30\",\n    \"cargo_capacity\": \"50000\",\n    \"consumables\": \"2 months\",\n    \"vehicle_class\": \"wheeled\",\n    \"pilots\": [\n      \"http://DCGBDJfPouJMjxuqCGQoULuBTeRfiVqG.hexqlGuzyWsvNyrf3IQNgcOxkwKfzMe+TvpeQSgmghm,SK1GXlkY\",\n      \"https://hugnYwlamIxpxMszCYF.ncfTWj0frhvHKqEagT18.+YLW3nz2kRTcNv.RIzYyrYsi00c.oQyYKn5MFE,UMV\"\n    ],\n    \"films\": [\n      \"https://LhQDFIUqNRozNZc.hjxeCKh58KLouQ,mf07tzxsuawokbIjSAnjvVIoj1eaB4T\",\n      \"http://WLCUJJaUUBAZEgZAyeIiRV.yxcGHuZR.W7i.-wAbEqF9GXMAoYfVux\"\n    ],\n    \"created\": \"1984-06-06T01:27:00.671Z\",\n    \"edited\": \"1959-10-06T23:04:35.533Z\",\n    \"url\": \"https://SB.vfdFYKRostz0m\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "16776bfe-be85-47ea-95eb-c247c5ff3364",
+          "name": "Get a vehicle by ID",
+          "request": {
+            "name": "Get a vehicle by ID",
+            "description": {
+              "content": "Retrieve a single Star Wars vehicle by its numeric ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "vehicles",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) The numeric ID of the vehicle"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "19419d7b-851b-47ba-afc9-160ad844d32b",
+              "name": "A single vehicle",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "vehicles",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) The numeric ID of the vehicle"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"Sand Crawler\",\n  \"model\": \"Digger Crawler\",\n  \"manufacturer\": \"Corellia Mining Corporation\",\n  \"cost_in_credits\": \"150000\",\n  \"length\": \"36.8\",\n  \"max_atmosphering_speed\": \"30\",\n  \"crew\": \"46\",\n  \"passengers\": \"30\",\n  \"cargo_capacity\": \"50000\",\n  \"consumables\": \"2 months\",\n  \"vehicle_class\": \"wheeled\",\n  \"pilots\": [\n    \"https://dw.murc7mRFoM9F5qh-0YIjmXFDvtKg2LXPeu.y.oQS1\",\n    \"https://lY.nokq\"\n  ],\n  \"films\": [\n    \"http://UxCBKVGPrJpxG.hnnUqk5N+,0XAkY+104J.,CIN\",\n    \"http://onRCSvXrbmoYSZy.ermrss2,F\"\n  ],\n  \"created\": \"1984-06-14T13:19:39.646Z\",\n  \"edited\": \"1950-04-10T21:37:10.129Z\",\n  \"url\": \"https://vHDniFBRyGgqqccJtHG.hosUS02xIXxWawmurvM7yunsiDHwlkx-ABTxtQ4HqI35OqeA\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "af8f0f6b-da7c-4ea0-aa12-b99c104b87e0",
+              "name": "Vehicle not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "vehicles",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) The numeric ID of the vehicle"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": \"Not found\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://swapi.info/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "9c3b8256-7e60-4256-be32-dbfb3e0a393c",
+    "name": "Star Wars REST API (SWAPI) Films Vehicles API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Star Wars REST API (swapi.info) is the world's first quantified and programmatically-accessible data source for all the data from the Star Wars canon universe. It provides structured JSON access to films, characters (people), starships, vehicles, planets, and species. No authentication is required.\n\nContact Support:\n Name: SWAPI",
+      "type": "text/plain"
+    }
+  }
+}

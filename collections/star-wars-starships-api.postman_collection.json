@@ -1,0 +1,234 @@
+{
+  "item": [
+    {
+      "id": "7e16755d-269e-4cdd-86b3-1a15b8788ab8",
+      "name": "Starships",
+      "description": {
+        "content": "Starships in the Star Wars universe",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "2481c6f4-aac6-4d30-874b-14faa606f354",
+          "name": "List all starships",
+          "request": {
+            "name": "List all starships",
+            "description": {
+              "content": "Retrieve a list of all starships in the Star Wars universe.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "starships"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8a678577-36f6-43a0-9600-378afcce2f3b",
+              "name": "A list of starships",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "starships"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"name\": \"Death Star\",\n    \"model\": \"DS-1 Orbital Battle Station\",\n    \"manufacturer\": \"Imperial Department of Military Research, Sienar Fleet Systems\",\n    \"cost_in_credits\": \"1000000000000\",\n    \"length\": \"120000\",\n    \"max_atmosphering_speed\": \"n/a\",\n    \"crew\": \"342,953\",\n    \"passengers\": \"843,342\",\n    \"cargo_capacity\": \"1000000000000\",\n    \"consumables\": \"3 years\",\n    \"hyperdrive_rating\": \"4.0\",\n    \"MGLT\": \"10\",\n    \"starship_class\": \"Deep Space Mobile Battlestation\",\n    \"pilots\": [\n      \"http://MpbyArXvCmJfkqUiHtpELtHtuasb.fnnuJhxralPfck8JCr4XmN71C,YNBphBW4WC1iJdyHplRnNGTXs4\",\n      \"http://ghfCJuRgUOCRWHKpeXSOghkUeyP.jtm,fA-6q09mxmXg8gubVzj4P2MR.c9.-ycPN\"\n    ],\n    \"films\": [\n      \"http://sTbNXu.zbtusA7QKJq,r.ycfTqsrxLvrAqfNhdk+eTXo4Hcp,-ThgabUfck47H7aKsAJ8Ol3NMqlZvYqy,F\",\n      \"https://TbiAGKDVUeSQmnuzpVRMCqIMc.ptiupUpw\"\n    ],\n    \"created\": \"2019-05-29T12:09:51.155Z\",\n    \"edited\": \"1977-08-15T02:04:51.637Z\",\n    \"url\": \"https://XebUNKdFRPmxnZLlWdJBzrnHyujVvcB.qlzk2ZvjBQDRa+.cIK+g1NgAHuMQTL8kiYlXAO87WrMOIuLgX8DgBe,GvX7ggR5QbfXIpPaFbiSUepNSE0\"\n  },\n  {\n    \"name\": \"Death Star\",\n    \"model\": \"DS-1 Orbital Battle Station\",\n    \"manufacturer\": \"Imperial Department of Military Research, Sienar Fleet Systems\",\n    \"cost_in_credits\": \"1000000000000\",\n    \"length\": \"120000\",\n    \"max_atmosphering_speed\": \"n/a\",\n    \"crew\": \"342,953\",\n    \"passengers\": \"843,342\",\n    \"cargo_capacity\": \"1000000000000\",\n    \"consumables\": \"3 years\",\n    \"hyperdrive_rating\": \"4.0\",\n    \"MGLT\": \"10\",\n    \"starship_class\": \"Deep Space Mobile Battlestation\",\n    \"pilots\": [\n      \"http://tFgfUdrlfxQrAlVrMRFhjCtMQ.nolmn3989bN1ZAyXJz0fK4YPcSWT-tg3b5wg2zkW\",\n      \"http://CmmtvFKqpESOGvsbuYBN.gaqxited0IKtuldgUVDzfRtaYltceWovsSjrXIkzjDlccZc4xbX3EdUVIrhvjE3S\"\n    ],\n    \"films\": [\n      \"http://FUfEGOwiqLs.mmwI9GRjF.Tjb8muO+oFqOG4GMhP+9JvUGmCbLR-b,.rI4OM.HTA3fhYiLLWyfe05Rf9\",\n      \"http://cKRSXrSvmOnsFEIQtjHJMMRJTJutYTRzA.hifpw\"\n    ],\n    \"created\": \"2001-02-11T15:25:54.350Z\",\n    \"edited\": \"1965-08-13T22:52:11.278Z\",\n    \"url\": \"https://hevpALCAcoH.qvelU,j,R9w-wH9mX3VQug5PXYNE8xbGHHAJz\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a500852d-7bc4-4416-a237-d6b1ca1148ff",
+          "name": "Get a starship by ID",
+          "request": {
+            "name": "Get a starship by ID",
+            "description": {
+              "content": "Retrieve a single Star Wars starship by its numeric ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "starships",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) The numeric ID of the starship"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "337bd4bc-9d73-4044-8376-cdc60f669a8c",
+              "name": "A single starship",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "starships",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) The numeric ID of the starship"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"Death Star\",\n  \"model\": \"DS-1 Orbital Battle Station\",\n  \"manufacturer\": \"Imperial Department of Military Research, Sienar Fleet Systems\",\n  \"cost_in_credits\": \"1000000000000\",\n  \"length\": \"120000\",\n  \"max_atmosphering_speed\": \"n/a\",\n  \"crew\": \"342,953\",\n  \"passengers\": \"843,342\",\n  \"cargo_capacity\": \"1000000000000\",\n  \"consumables\": \"3 years\",\n  \"hyperdrive_rating\": \"4.0\",\n  \"MGLT\": \"10\",\n  \"starship_class\": \"Deep Space Mobile Battlestation\",\n  \"pilots\": [\n    \"https://Fj.pcIxI.DF+3FQiV6\",\n    \"https://duKQhObPQEPftQQnaccZNh.fmsZTJH-e3iWj6fGMBaYza4leXTLubPvFBCAnlVqDJhkGY\"\n  ],\n  \"films\": [\n    \"http://mmZLhEituCTPBFTzsUxKzrOgabqPZrC.lbmwYD.\",\n    \"http://uCSlncGBfVoR.ykdhV.Zd7g.Vz-wfjVbUv0.UOT+F1\"\n  ],\n  \"created\": \"1961-04-14T21:09:01.017Z\",\n  \"edited\": \"1987-02-23T12:37:27.284Z\",\n  \"url\": \"https://DxpHhyfgOIEGkvSVnPfTxwJGeQq.olbpV+qqI00zrpfmkUQ,D-cVDNn3bVf5zV0-k,3Yzx,KwBNi0oWMB3c1DthUB\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9bd8f69f-28d4-4cd8-ad6d-7515f1e901a6",
+              "name": "Starship not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "starships",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) The numeric ID of the starship"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": \"Not found\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://swapi.info/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "290393af-b641-4f3c-ad09-4394780d566d",
+    "name": "Star Wars REST API (SWAPI) Films Starships API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Star Wars REST API (swapi.info) is the world's first quantified and programmatically-accessible data source for all the data from the Star Wars canon universe. It provides structured JSON access to films, characters (people), starships, vehicles, planets, and species. No authentication is required.\n\nContact Support:\n Name: SWAPI",
+      "type": "text/plain"
+    }
+  }
+}

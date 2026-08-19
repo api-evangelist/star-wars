@@ -1,0 +1,48 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Star Wars REST API (SWAPI) Films Species API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Species",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all species",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://swapi.info/api/species"
+          },
+          "docs": "Retrieve a list of all species in the Star Wars universe."
+        },
+        {
+          "info": {
+            "name": "Get a species by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://swapi.info/api/species/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The numeric ID of the species"
+              }
+            ]
+          },
+          "docs": "Retrieve a single Star Wars species by its numeric ID."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

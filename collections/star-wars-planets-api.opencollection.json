@@ -1,0 +1,48 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Star Wars REST API (SWAPI) Films Planets API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Planets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all planets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://swapi.info/api/planets"
+          },
+          "docs": "Retrieve a list of all planets in the Star Wars universe."
+        },
+        {
+          "info": {
+            "name": "Get a planet by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://swapi.info/api/planets/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The numeric ID of the planet"
+              }
+            ]
+          },
+          "docs": "Retrieve a single Star Wars planet by its numeric ID."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

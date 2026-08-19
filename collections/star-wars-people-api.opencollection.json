@@ -1,0 +1,48 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Star Wars REST API (SWAPI) Films People API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "People",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all people",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://swapi.info/api/people"
+          },
+          "docs": "Retrieve a list of all people (characters) in the Star Wars universe."
+        },
+        {
+          "info": {
+            "name": "Get a person by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://swapi.info/api/people/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The numeric ID of the person"
+              }
+            ]
+          },
+          "docs": "Retrieve a single Star Wars character by their numeric ID."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

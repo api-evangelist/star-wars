@@ -1,0 +1,234 @@
+{
+  "item": [
+    {
+      "id": "1c48cc21-063a-4219-8b1b-28fee7c635a9",
+      "name": "People",
+      "description": {
+        "content": "People and characters in the Star Wars universe",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ec9d8f53-ea63-4a6a-ace7-9a79fd8fbc2c",
+          "name": "List all people",
+          "request": {
+            "name": "List all people",
+            "description": {
+              "content": "Retrieve a list of all people (characters) in the Star Wars universe.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "people"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "574d8904-bb8d-49d2-aa3c-e9d33562b25b",
+              "name": "A list of people",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "people"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"name\": \"Luke Skywalker\",\n    \"height\": \"172\",\n    \"mass\": \"77\",\n    \"hair_color\": \"blond\",\n    \"skin_color\": \"fair\",\n    \"eye_color\": \"blue\",\n    \"birth_year\": \"19BBY\",\n    \"gender\": \"male\",\n    \"homeworld\": \"http://XnlHcwWyyeXc.hodrAjeTX2Xg,k\",\n    \"films\": [\n      \"https://UnDqHlPYevGLmJAkdZaM.jsmePI8lNsrtOpVqngsTF\",\n      \"https://RZAtWTljsNiUM.flofLHAG8fpEEhje-KY3Etp2l-.LcTIQamnoBhDPiHPwLIn6TTxJBWKKXF\"\n    ],\n    \"species\": [\n      \"http://EZuwfaoeRHBkkGvhNsAaikdemvjCpCSx.sbpjyPILnX,7z9J2GsaI9uRUSPuPoGD94PrsgC2p4kPD1ILkIbDbYxR-4Py2pM\",\n      \"https://BKcdHodjKkuwbvcWHSjDpgfATJWQB.oejwECIvHyXwHvhH62LMLNsndg4IKt.jMkp-LEdDG1zenw1KEq\"\n    ],\n    \"vehicles\": [\n      \"http://bn.khec51OtVdR2QJ+y6N+DmaYJ2xdkxfeHDnzA44,DMAqKMgXA6Fn9\",\n      \"http://DxtkC.mpHqDkZ6l3k,jfggHQbgZAxNvImncyO,yu49h1qpoY9TkZhHhOrKQwm.s5xj9\"\n    ],\n    \"starships\": [\n      \"http://IHziMIlcpjOYMVHjGbYzgBrLRqVqsPEg.hijvTXhBJrPkMQIrelcD7CiPjA2Kr08ugXqCiOty3H0tuxbvEBW9BS06,TyJkk6axeLDwJl\",\n      \"https://BzMYy.uqLU0\"\n    ],\n    \"created\": \"1949-01-30T02:29:54.685Z\",\n    \"edited\": \"1993-02-08T05:58:02.891Z\",\n    \"url\": \"https://VTEAhxkfkejXEOjr.itaZatdi8DW3upTEnXhuiqNfnYDDf80gOeuE+2F-DTuPr0DtpdL6mKiRY\"\n  },\n  {\n    \"name\": \"Luke Skywalker\",\n    \"height\": \"172\",\n    \"mass\": \"77\",\n    \"hair_color\": \"blond\",\n    \"skin_color\": \"fair\",\n    \"eye_color\": \"blue\",\n    \"birth_year\": \"19BBY\",\n    \"gender\": \"male\",\n    \"homeworld\": \"https://oGXaFUg.pifwXRhrDjZqV9dvf.u7WSiP-E8EXeC\",\n    \"films\": [\n      \"http://RFxtrdyVbnseQAPuCOdkzNlliDsmObgI.snjnPEk16Dd.wvHxN6DHtxuJctzrRPe6B9pc6\",\n      \"https://KzGlGIgsqvvipzhTjIyTFQKNWghth.kqbIxadp9xu-bmp6gjcw0fsawG9UitZJbFJZWaVrOm0MmW-NZglM0ie9e-rJXx3EIPg.Spph-mEUHxhctZ\"\n    ],\n    \"species\": [\n      \"http://OZTocrZrechPuPVkbXoptMSYXGLa.zjqoGKSLKRNJkf9h5OZ9MC.xmK-UXEdSdVOusZ8Pbcv4XuvTKVV\",\n      \"https://NbeBSYabBRoBmpizuFLVI.tolNiYBAhKERKeNxP6rMEMGmfkVGK\"\n    ],\n    \"vehicles\": [\n      \"https://YWdEjhpXwenO.cdqzBErh7gm8DFfyLEv\",\n      \"http://ckEfgHbXmv.rcixhcpY-LXMqTyy,51X+c8Z67yZ\"\n    ],\n    \"starships\": [\n      \"https://hnWmDONIzycTuuJkLHoFoqE.ttmNOK,1OKn1KlkVjA8SWPFUk0ooHH.9RO0ESZNrB-pJd1qahaORft+\",\n      \"http://WJUSShwizZ.hsyTwaugjJKAu3UJcoT\"\n    ],\n    \"created\": \"1966-12-07T23:36:08.820Z\",\n    \"edited\": \"1968-03-06T09:44:36.453Z\",\n    \"url\": \"http://rLIQxQmXv.pjrKfarj8ZsLjY\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "81a875f2-615c-40b4-8534-413d99ee806d",
+          "name": "Get a person by ID",
+          "request": {
+            "name": "Get a person by ID",
+            "description": {
+              "content": "Retrieve a single Star Wars character by their numeric ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "people",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) The numeric ID of the person"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "25992ee8-b3e4-4ba5-bf50-7c6c612ea00c",
+              "name": "A single person",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "people",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) The numeric ID of the person"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"Luke Skywalker\",\n  \"height\": \"172\",\n  \"mass\": \"77\",\n  \"hair_color\": \"blond\",\n  \"skin_color\": \"fair\",\n  \"eye_color\": \"blue\",\n  \"birth_year\": \"19BBY\",\n  \"gender\": \"male\",\n  \"homeworld\": \"https://CRfBtTPJrmdPtmIbTsO.hnrlr+-MbX1KUg0E9CJpSfiA79N,8aUqbNKB7b-jlRQNfo+CGQsKfAwBoqq9rnM\",\n  \"films\": [\n    \"https://EHIGSxBDSmmrFnBF.ejaSx8gv4Z4cunOFGFwMsQVR\",\n    \"http://ZpeMHXtallBIacJ.snajHO4woGyERMUeOYbGb1qUR-uk4keznyn\"\n  ],\n  \"species\": [\n    \"http://YehLnoYjfQeTAdzBiMSOvFOCMvPUEiG.atyVoU8C7wg9FlRY9HC8csITUIJAu2CfZrfC9C1jLf,ZCJ9OH\",\n    \"https://oUvVdYujemzuClYGYPsuCFq.axjPYNTY9Bf9WIzvlVoV6IpGUj0UKvtbzSHNww,pLyLNQqW\"\n  ],\n  \"vehicles\": [\n    \"http://uxcUGbCPyNZtuOa.wsgZABU3TLIb3cAhE2SJJD,Azm7yRJg1ol3aVgOChoKyK6n,SGDL7uBSZinFdlSblm\",\n    \"http://RArYDfNBHdxvragOT.mgg+zWNH\"\n  ],\n  \"starships\": [\n    \"https://ridFoXxvl.zqshxRUMJce.N+APOpWasZYvHFGkW+tPezXbC-1EX1ZS\",\n    \"http://wVSei.vmoubLYSzlHeO\"\n  ],\n  \"created\": \"1956-01-09T21:49:44.233Z\",\n  \"edited\": \"2004-03-09T21:39:37.868Z\",\n  \"url\": \"https://DSkXyzzXJWxol.njurLYUZYfovZUgd6mFXv5z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "00f4eb7b-9988-493a-bc24-55c3ebbd5b6f",
+              "name": "Person not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "people",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) The numeric ID of the person"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": \"Not found\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://swapi.info/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "38ac8e83-a4ae-4855-b97e-3af4cf20d0cf",
+    "name": "Star Wars REST API (SWAPI) Films People API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Star Wars REST API (swapi.info) is the world's first quantified and programmatically-accessible data source for all the data from the Star Wars canon universe. It provides structured JSON access to films, characters (people), starships, vehicles, planets, and species. No authentication is required.\n\nContact Support:\n Name: SWAPI",
+      "type": "text/plain"
+    }
+  }
+}

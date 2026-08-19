@@ -1,0 +1,234 @@
+{
+  "item": [
+    {
+      "id": "ba7d7c3a-a169-4a3d-bd26-7dc462c252d0",
+      "name": "Species",
+      "description": {
+        "content": "Species in the Star Wars universe",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "539dc21b-c588-4ef5-a75d-a13ebeae7e31",
+          "name": "List all species",
+          "request": {
+            "name": "List all species",
+            "description": {
+              "content": "Retrieve a list of all species in the Star Wars universe.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "species"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d9579653-f74e-4587-9ed9-2965daed08af",
+              "name": "A list of species",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "species"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"name\": \"Human\",\n    \"classification\": \"mammal\",\n    \"designation\": \"sentient\",\n    \"average_height\": \"180\",\n    \"skin_colors\": \"caucasian, black, asian, hispanic\",\n    \"hair_colors\": \"blonde, brown, black, red\",\n    \"eye_colors\": \"brown, blue, green, hazel, grey, amber\",\n    \"average_lifespan\": \"120\",\n    \"homeworld\": \"https://pwCCYadFvUJxvUgIcCrHFRxYU.anrsRRfy3qU\",\n    \"language\": \"Galactic Basic\",\n    \"people\": [\n      \"http://YeQLWKEjQi.nsqZhvkEgby0j4jFCVdEo5\",\n      \"http://qfjUqLmoKUAEIbIYhGwc.bppllicXeM+5BSA.ML7aU9ElLByc03mGycH60bC.WdQcUPdhRUJCqI\"\n    ],\n    \"films\": [\n      \"http://mznHzNOgkYJTiSn.rqoujoI9UmY4ilo65oAt5MpDIMbJAD3F\",\n      \"http://KakGNojyhQdAuZGLgYQQA.unR+7+1euREEZXt3by9\"\n    ],\n    \"created\": \"1970-05-10T21:16:13.686Z\",\n    \"edited\": \"1954-08-20T17:45:20.956Z\",\n    \"url\": \"https://HeSFZTNetEmWrmXYrGztxrZwDeC.jjgrVBLq-mu,4XhJXHDYlQOHDhw2Y3VDaJ-.jxpQiq147RBq5YqVzOURftgVp\"\n  },\n  {\n    \"name\": \"Human\",\n    \"classification\": \"mammal\",\n    \"designation\": \"sentient\",\n    \"average_height\": \"180\",\n    \"skin_colors\": \"caucasian, black, asian, hispanic\",\n    \"hair_colors\": \"blonde, brown, black, red\",\n    \"eye_colors\": \"brown, blue, green, hazel, grey, amber\",\n    \"average_lifespan\": \"120\",\n    \"homeworld\": \"https://FWsEELIYZzdMQnFAMbfKDVcUGURAldGw.nmYW.AMqcIWZ.gko66Go+bFDkx87QtjDJu\",\n    \"language\": \"Galactic Basic\",\n    \"people\": [\n      \"https://zyrFoWRzhtxIMWyyLRlBJ.oqIUY0yTlyya0wjtRWbXK3Q+9q6VBbTgLmRKyyT4\",\n      \"http://obuDSIRrNGX.qzPyZ4NUNd5hV8evIhuXvYmbymJ9FoKm2HKWVcrsdzpz\"\n    ],\n    \"films\": [\n      \"http://wanojEkXLZggY.ybmdX1x8UNuLR6M1O6JBEMT\",\n      \"https://WNSfNRyN.iikDku3U-c+jzu8UVyC7AB5a\"\n    ],\n    \"created\": \"1969-09-01T10:37:31.106Z\",\n    \"edited\": \"2000-01-17T19:24:37.221Z\",\n    \"url\": \"http://ZOPmhPtxadJSPaqqkvXy.ngB4Q.nfXAFhpD+Le+ESflZGdbG7dMExzqMs,h1u.IDIDK4DVykM\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ed683a1f-e051-4402-8068-d32161cbf23c",
+          "name": "Get a species by ID",
+          "request": {
+            "name": "Get a species by ID",
+            "description": {
+              "content": "Retrieve a single Star Wars species by its numeric ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "species",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) The numeric ID of the species"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ad0cea54-1953-4d8b-97de-77f81a09d413",
+              "name": "A single species",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "species",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) The numeric ID of the species"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"Human\",\n  \"classification\": \"mammal\",\n  \"designation\": \"sentient\",\n  \"average_height\": \"180\",\n  \"skin_colors\": \"caucasian, black, asian, hispanic\",\n  \"hair_colors\": \"blonde, brown, black, red\",\n  \"eye_colors\": \"brown, blue, green, hazel, grey, amber\",\n  \"average_lifespan\": \"120\",\n  \"homeworld\": \"http://bgqjTgzxNZxbILstzivpKVsrqbWqXeOR.dcsiClw5RxbNZvwYCtFcICavoBg0M03C8DfzEEuyoDC\",\n  \"language\": \"Galactic Basic\",\n  \"people\": [\n    \"https://r.xnU.pAKcz-43RuBY,jldPQPgJykBDEuHILThWbidxddV\",\n    \"http://katZvRnrEgs.toyieb5GG8au+dFnuaUUoUvKoN8r\"\n  ],\n  \"films\": [\n    \"http://samSZnmPAYgq.iiREVmoIKvn8\",\n    \"https://oXHbb.blmgJke0vzaqdNZnfUI6jjMK-l+bMbRASCz3sZ9YjO.sgbKoTjWoYx\"\n  ],\n  \"created\": \"1970-02-06T12:12:20.767Z\",\n  \"edited\": \"1980-08-07T15:39:42.367Z\",\n  \"url\": \"https://SmwqtuOFmAOUYuDnrKDItEIwDssyD.jxhqvH3V+QhJkAlcwSiRwaYh0xnUoiiHnn6Y8VIxq.8FVZXCBX\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "04124061-5ddd-47c5-84f2-e0a67ddd2472",
+              "name": "Species not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "species",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) The numeric ID of the species"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": \"Not found\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://swapi.info/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "b44bbd4d-c364-4f81-8d55-bed1c151d9e1",
+    "name": "Star Wars REST API (SWAPI) Films Species API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Star Wars REST API (swapi.info) is the world's first quantified and programmatically-accessible data source for all the data from the Star Wars canon universe. It provides structured JSON access to films, characters (people), starships, vehicles, planets, and species. No authentication is required.\n\nContact Support:\n Name: SWAPI",
+      "type": "text/plain"
+    }
+  }
+}

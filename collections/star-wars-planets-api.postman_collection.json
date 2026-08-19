@@ -1,0 +1,234 @@
+{
+  "item": [
+    {
+      "id": "693f14f6-645d-4897-bea5-658f3fd27c05",
+      "name": "Planets",
+      "description": {
+        "content": "Planets in the Star Wars universe",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f18158a2-95a2-4698-8ade-98e1351e2162",
+          "name": "List all planets",
+          "request": {
+            "name": "List all planets",
+            "description": {
+              "content": "Retrieve a list of all planets in the Star Wars universe.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "planets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "89fa3387-2595-4e86-ac65-98fc74634779",
+              "name": "A list of planets",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "planets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"name\": \"Tatooine\",\n    \"rotation_period\": \"23\",\n    \"orbital_period\": \"304\",\n    \"diameter\": \"10465\",\n    \"climate\": \"arid\",\n    \"gravity\": \"1 standard\",\n    \"terrain\": \"desert\",\n    \"surface_water\": \"1\",\n    \"population\": \"200000\",\n    \"residents\": [\n      \"https://QTxdTaMkPEr.vpAqARdlCF5qQjiasUsQ+9WKJMHEgQjupuoCpC1dRz04oYaJ.QxElLjzKKr\",\n      \"https://okWZETCnYHtcZGIHyStWcmKmmHxfvUG.dqagsJnnSe5p2K5yCPZKOmRm67uoYQreX,tmkngD09\"\n    ],\n    \"films\": [\n      \"https://OfhhrpaWnwuswvqJCQtqaNFTTbC.hbzfqo,TtaQWyMEAUnVIwDxqlBzJ1qn+0jV+0kXFBpkEr+4jvgtU5+zsA+nZZ70RKVT+tXAIQNMnp\",\n      \"http://ktSTmYDArhzaKQnmpfImQY.ospMj5ACXsbnaJLTPvlf0JlQqQeLgw5DchsFPEoB4U,S1Okqa3vOBsTiWKHkAUExtEjabC5.uIF\"\n    ],\n    \"created\": \"2004-08-09T18:05:01.610Z\",\n    \"edited\": \"2021-03-06T19:31:54.407Z\",\n    \"url\": \"http://zvXOCpGjmoqBrvfozKpKtVakpiuUnM.gtpbIEY3FaD8bF4RndwvtyGeNySzMFnnomMMtUq7HODncuiaVT,pQPgu\"\n  },\n  {\n    \"name\": \"Tatooine\",\n    \"rotation_period\": \"23\",\n    \"orbital_period\": \"304\",\n    \"diameter\": \"10465\",\n    \"climate\": \"arid\",\n    \"gravity\": \"1 standard\",\n    \"terrain\": \"desert\",\n    \"surface_water\": \"1\",\n    \"population\": \"200000\",\n    \"residents\": [\n      \"http://sSAExdzOPtDuFWHoAWCPBdf.qqplzD8YVwsfIspBPbJ.IVCm\",\n      \"http://b.ixxh5IYo+BPV-RlFrH,q7hUd\"\n    ],\n    \"films\": [\n      \"http://ZI.kqlcrISKGuxtSBNhyJNxRCMn3w7lsVts-4DDTNp4jeHybn7VELgt\",\n      \"https://UkTFNoWfXYmhKRLyFAO.tzrGISdVsmLTq2IOY.eJDe+RVpwM,skaCECCkBHBA67xEQEzV7hYe17sampQ\"\n    ],\n    \"created\": \"1964-05-20T00:54:05.869Z\",\n    \"edited\": \"1952-04-24T06:36:01.017Z\",\n    \"url\": \"https://OTqmANm.nidIFcjJDC,zFq,ZADd1Pj3o2-ZVgAFfU2Nm7JeoN,eTfQtn26xfYjHfz7GW9QEhPh\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "92e38be1-bcc9-43eb-b145-879d2cb47593",
+          "name": "Get a planet by ID",
+          "request": {
+            "name": "Get a planet by ID",
+            "description": {
+              "content": "Retrieve a single Star Wars planet by its numeric ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "planets",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) The numeric ID of the planet"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "83ec9201-8808-4cde-a40d-f3bbdaa8aca3",
+              "name": "A single planet",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "planets",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) The numeric ID of the planet"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"Tatooine\",\n  \"rotation_period\": \"23\",\n  \"orbital_period\": \"304\",\n  \"diameter\": \"10465\",\n  \"climate\": \"arid\",\n  \"gravity\": \"1 standard\",\n  \"terrain\": \"desert\",\n  \"surface_water\": \"1\",\n  \"population\": \"200000\",\n  \"residents\": [\n    \"https://RAJBEGANuhMhOnQ.rnamiPWT3.YwZPDpxy7O8l\",\n    \"http://mSGlPmOLxtHQVXru.tffdSYxHTnZR\"\n  ],\n  \"films\": [\n    \"https://LCQRShyomcBEEhSsUTVLhg.jivhDbmI1EBVZOeG-FH\",\n    \"https://LMxRNHUevlOJFNloTDu.rrsab3EHgnecYirPCHtSbwLvWzLnRsmMf\"\n  ],\n  \"created\": \"1950-11-28T08:16:15.670Z\",\n  \"edited\": \"2001-08-01T17:29:39.499Z\",\n  \"url\": \"https://ZLqaI.kgnfoIlRps\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f33bc08a-491e-4d6a-8db7-3ce09df73f93",
+              "name": "Planet not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "planets",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) The numeric ID of the planet"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": \"Not found\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://swapi.info/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "8329cf95-8429-4708-8c14-cb532a398f53",
+    "name": "Star Wars REST API (SWAPI) Films Planets API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Star Wars REST API (swapi.info) is the world's first quantified and programmatically-accessible data source for all the data from the Star Wars canon universe. It provides structured JSON access to films, characters (people), starships, vehicles, planets, and species. No authentication is required.\n\nContact Support:\n Name: SWAPI",
+      "type": "text/plain"
+    }
+  }
+}

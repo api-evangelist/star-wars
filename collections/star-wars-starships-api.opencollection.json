@@ -1,0 +1,48 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Star Wars REST API (SWAPI) Films Starships API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Starships",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all starships",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://swapi.info/api/starships"
+          },
+          "docs": "Retrieve a list of all starships in the Star Wars universe."
+        },
+        {
+          "info": {
+            "name": "Get a starship by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://swapi.info/api/starships/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The numeric ID of the starship"
+              }
+            ]
+          },
+          "docs": "Retrieve a single Star Wars starship by its numeric ID."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

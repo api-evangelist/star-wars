@@ -1,0 +1,48 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Star Wars REST API (SWAPI) Films API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Films",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all films",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://swapi.info/api/films"
+          },
+          "docs": "Retrieve a list of all Star Wars films."
+        },
+        {
+          "info": {
+            "name": "Get a film by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://swapi.info/api/films/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The numeric ID of the film"
+              }
+            ]
+          },
+          "docs": "Retrieve a single Star Wars film by its numeric ID."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
