@@ -32,6 +32,17 @@ tags:
   - Star Wars
   - Science Fiction
   - Entertainment
+  - Film
+  - Characters
+  - Planets
+  - Starships
+  - Vehicles
+  - Species
+  - Open-Source
+tags_raw:
+  - Star Wars
+  - Science Fiction
+  - Entertainment
   - Films
   - Characters
   - Planets
@@ -46,6 +57,8 @@ apis:
   humanURL: https://swapi.info
   baseURL: https://swapi.info/api
   tags:
+  - Film
+  tags_raw:
   - Films
   properties:
   - type: OpenAPI
