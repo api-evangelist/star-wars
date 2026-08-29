@@ -11,6 +11,18 @@ description: >
   iteration at swapi.info was rebuilt by Sivaram P as a CDN-powered,
   file-based API serving over one million daily requests with sub-50ms global
   response times via Vercel and Cloudflare.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: free
   onboarding: open
