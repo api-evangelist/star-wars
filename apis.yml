@@ -44,7 +44,7 @@ tags:
   - Star Wars
   - Science Fiction
   - Entertainment
-  - Film
+  - Films
   - Characters
   - Planets
   - Starships
@@ -69,7 +69,7 @@ apis:
   humanURL: https://swapi.info
   baseURL: https://swapi.info/api
   tags:
-  - Film
+  - Films
   tags_raw:
   - Films
   properties:
