@@ -1,4 +1,4 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
   title: Star Wars REST API (SWAPI) Films API
   description: The Star Wars REST API (swapi.info) is the world's first quantified and programmatically-accessible data source for all the data from the Star Wars canon universe. It provides structured JSON access to films, characters (people), starships, vehicles, planets, and species. No authentication is required.
@@ -61,6 +61,12 @@ paths:
                 $ref: '#/components/schemas/NotFound'
 components:
   schemas:
+    NotFound:
+      type: object
+      properties:
+        detail:
+          type: string
+          example: Not found
     Film:
       type: object
       description: A Star Wars film
@@ -146,9 +152,3 @@ components:
           type: string
           format: uri
           description: The hypermedia URL of this resource
-    NotFound:
-      type: object
-      properties:
-        detail:
-          type: string
-          example: Not found
