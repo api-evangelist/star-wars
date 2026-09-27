@@ -50,7 +50,7 @@ tags:
   - Starships
   - Vehicles
   - Species
-  - Open-Source
+  - Open Source
 tags_raw:
   - Star Wars
   - Science Fiction
@@ -62,6 +62,7 @@ tags_raw:
   - Vehicles
   - Species
   - Open Source
+  - Open-Source
 apis:
 - aid: star-wars:star-wars-films-api
   name: Star Wars API Films API
