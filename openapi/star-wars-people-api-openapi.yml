@@ -61,12 +61,6 @@ paths:
                 $ref: '#/components/schemas/NotFound'
 components:
   schemas:
-    NotFound:
-      type: object
-      properties:
-        detail:
-          type: string
-          example: Not found
     Person:
       type: object
       description: A person/character in the Star Wars universe
@@ -160,3 +154,9 @@ components:
           type: string
           format: uri
           description: The hypermedia URL of this resource
+    NotFound:
+      type: object
+      properties:
+        detail:
+          type: string
+          example: Not found
