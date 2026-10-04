@@ -48,7 +48,6 @@ tags:
   - Characters
   - Planets
   - Starships
-  - Vehicles
   - Species
   - Open Source
 tags_raw:
@@ -59,7 +58,6 @@ tags_raw:
   - Characters
   - Planets
   - Starships
-  - Vehicles
   - Species
   - Open Source
   - Open-Source
@@ -228,3 +226,5 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-tags-removed:
+- Vehicles
